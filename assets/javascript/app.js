@@ -38,7 +38,7 @@ $(document).ready(function () {
                 // a for loop for each gif
                 for (var i = 0; i < results.length; i++) {
                     // adds a new div with class item for each gif
-                    var gifDiv = $("<div class='item'>");
+                    var gifDiv = $("<div class='item card'>");
 
                     // takes the rating for the gif into variable
                     var rating = results[i].rating;
@@ -48,9 +48,9 @@ $(document).ready(function () {
 
                     // adds an img tag for the gif and sets up all classes/ids/data information for still/animation
                     var topicImage = $("<img>");
-                    topicImage.attr("src", results[i].images.fixed_height_still.url);
-                    topicImage.attr("data-still", results[i].images.fixed_height_still.url);
-                    topicImage.attr("data-animate", results[i].images.fixed_height.url);
+                    topicImage.attr("src", results[i].images.fixed_width_still.url);
+                    topicImage.attr("data-still", results[i].images.fixed_width_still.url);
+                    topicImage.attr("data-animate", results[i].images.fixed_width.url);
                     topicImage.attr("id", "gif");
                     topicImage.attr("data-state", "still");
 
